@@ -99,17 +99,3 @@ Notes about commands
 - Commands that require a logged-in user are wrapped by `middlewareLoggedIn` which reads `currentUserName` from `~/.gatorconfig.json` and injects the `User` into handlers.
 - If `~/.gatorconfig.json` is missing or `currentUserName` is empty, commands that rely on a user will fail.
 
-## Troubleshooting & tips
-
-- If the CLI complains about DB connectivity, verify `dbUrl` and that Postgres is running and accessible.
-- `src/CommandsRegistry.ts` and `src/commandsRegistry.ts` are duplicates; keep one to avoid confusion.
-- There are a few small issues to be aware of (typos and query composition) in `src/lib/db/queries/feed_follows.ts` and others — I can open PRs to fix them if you want.
-
-## Next steps I can help with
-
-- Run the migrations and create a test user/feed.
-- Fix small bugs and consolidate duplicate files.
-
----
-
-Created by the project assistant — ask me to run migrations or try an example command.
